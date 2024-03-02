@@ -31,10 +31,8 @@ Click or tab: Place Pixel
 
 ### Building
 Checkout repository
-
 ```
-git clone https://git.pixelplanet.fun/ppfun/pixelplanet.git
-cd pixelplanet
+Copy The Base code
 ```
 
 Install packages and build
@@ -59,10 +57,10 @@ git config --global url.https://github.com/.insteadOf git://github.com/
 
 ## Run
 ### Requirements
-- nodejs environment with [npm](https://www.npmjs.com/get-npm) (>=16)
 - [pm2](https://github.com/Unitech/pm2) (`npm install -g pm2`) as process manager and for logging
 - [redis](https://redis.io/) as database for storìng the canvas
-- mysql or mariadb ([setup own user](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql) and [create database](https://www.w3schools.com/SQl/sql_create_db.asp) for pixelplanet) for storing additional data like IP blacklist
+- a database for users
+(https://www.w3schools.com/SQl/sql_create_db.asp) for pixelplanet) for storing additional data like IP blacklist
 
 ### Configuration
 Configuration takes place in the environment variables that are defined in ecosystem.yml.
@@ -170,10 +168,10 @@ npm install
 ### Running
 
 1. Make sure that mysql and redis are running
-3. Start with 
+3. Start it with pm2 
 
 ```
-pm2 start ecosystem.yml
+pm2 start configusion file.yml
 ```
 
 ### Logging
